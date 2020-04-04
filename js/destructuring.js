@@ -14,6 +14,8 @@ const gon = {
 // Template literal
 console.log(`${gon.firstname} ${gon.lastname} has the following abilities:`)
 
+
+// for of Object keys
 for (const ability of Object.keys(gon.nen)) {
     console.log(`${ability} of level %c${gon.nen[ability]}`, style);
 }

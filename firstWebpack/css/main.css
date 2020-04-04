@@ -1,0 +1,136 @@
+.flex-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-block-end: 1rem;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-gap: 10px; 
+}
+
+body {
+    color: whitesmoke;
+    font-size: xx-large;
+}
+
+.padding1 {
+    padding : 1rem;
+}
+
+.item1-1 {
+    background-color : red;
+}
+
+.item1-2 {
+    background-color : green;
+}
+
+.item1-3 {
+    background-color : blue;
+}
+
+
+/*
+ #####################
+    SELECTEURS CSS
+ #####################
+*/
+p {
+
+}
+
+.my-class {
+
+}
+
+#my-Id {
+
+}
+
+h1 p {
+
+}
+
+h1 + p {
+
+}
+
+h1 ~ p {
+
+}
+
+/*
+    SELECTEURS D'ATTRIBUT
+*/
+
+a[href^="http"] {
+
+}
+
+a[title="paragraph"] {
+
+}
+
+
+/*
+    SELECTEURS PSEUDO CLASSE
+*/
+
+a:hover {
+
+}
+
+a:focus {
+
+}
+
+a:active {
+
+}
+
+a:visited {
+
+}
+p:first-child() {
+
+}
+
+p:last-child() {
+
+}
+
+
+p:nth-child() {
+
+}
+
+input:disabled {
+
+}
+
+
+/*
+
+DISPLAY
+
+block : can set width and height, one under the other
+
+inline : cannot set width and height, one next to the other
+
+inline-block : set witdh and height, ont next to the other
+*/
+
+
+
+/*
+
+Fusion des marges
+
+deux éléments adjacents avec des marges => la plus grande l'emporte
+
+
+Si parent n'a pas de marge mais qu'un enfant (direct ?) en a 
+    => parent prend la marge de l'enfant aussi
+*/
