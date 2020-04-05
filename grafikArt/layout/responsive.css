@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 90%;
+    margin: 2em auto;
+    font: 1em/1.3 Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+a:link,
+a:visited {
+    color: #333;
+}
+
+nav ul,
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav a:link,
+nav a:visited {
+    background-color: rgba(207, 232, 220, 0.2);
+    border: 2px solid rgb(79, 185, 227);
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: rgba(207, 232, 220, 0.7);
+}
+
+.related {
+    background-color: rgba(79, 185, 227, 0.3);
+    border: 1px solid rgb(79, 185, 227);
+    padding: 10px;
+}
+
+.sidebar {
+    background-color: rgba(207, 232, 220, 0.5);
+    padding: 10px;
+}
+
+article {
+    margin-bottom: 1em;
+}
+
+/* Ecran intermédiaire */
+@media screen and (min-width: 40em) {
+    nav ul {
+        /* Affiche les liens sur une row */
+        display: flex;
+    }
+    nav li {
+        flex: 1;
+    }
+    article {
+        /* affiche content et related dans une grid de 2 colonnes */
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        column-gap: 20px;;
+    }
+}
+
+/* Ecran large */
+@media screen and (min-width: 70em) {
+    main {
+        /* affiche article et sidebar sur une grid de 2 colonnes */
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        column-gap: 20px;
+    }
+
+    article {
+        margin-bottom: 0;
+    }
+
+    footer {
+        border-top: 1px solid #ccc;
+        margin-top: 2em;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .content {
+        background-color: khaki;
+    }
+}
