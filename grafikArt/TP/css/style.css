@@ -1,0 +1,7 @@
+body{
+    margin: 0
+}
+
+a::before {
+    content: '\1F601';
+}

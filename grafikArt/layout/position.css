@@ -1,0 +1,70 @@
+.static {
+    position: static;
+    background: rgba(218, 145, 103, 0.473);
+}
+
+.relative {
+    position: relative;
+    top: 30px;
+    left: 30px;
+    background: rgba(218, 120, 103, 0.493);
+}
+
+.absolute {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    background: rgba(103, 218, 113, 0.877);
+}
+
+.absolute-container {
+    position: relative;
+    background-color: rgba(128, 128, 128, 0.384);
+    height: 100px;
+}
+
+strong {
+    font-size: xx-large;
+    color: rgb(23, 31, 10);
+}
+
+.z-index {
+    position: relative;
+    margin-bottom: 200px;
+}
+
+.z-index p:nth-of-type(1) {
+    position: absolute;
+    background: rgba(0, 255, 0, 0.438);
+    top: 10px;
+    right: 30px;
+    z-index: 2;
+}
+
+.z-index p:nth-of-type(2) {
+    position: absolute;
+    background: rgba(255, 72, 0, 0.459);
+    z-index : 1;
+    color: rgb(255, 255, 255);
+}
+
+.z-index p:nth-of-type(2) strong {
+    color: rgb(255, 255, 255);
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    background: rgba(162, 90, 180, 0.685);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sticky {
+    position: sticky;
+  top: 50%;
+  left: 30px;
+  background-color: khaki;
+}

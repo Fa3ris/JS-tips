@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Normal Flow</title>
+  <link rel="stylesheet" href="normal-flow.css">
+</head>
+
+<body>
+  <h1>Basic document flow</h1>
+
+  <article>
+    <h2>Comportement par défaut</h2>
+    <section>
+      <h3>Block elements</h3>
+
+        <ul>
+          <li>100% width de l'élément parent</li>
+          <li>height aussi grand que le contenu</li>
+        </ul>
+
+    </section>
+    <section>
+      <h3>Inline elements</h3>
+
+        <ul>
+          <li>width height aussi grand que le contenu</li>
+          <li>height aussi grand que le contenu</li>
+        </ul>
+
+    </section>
+
+      <h3>Block Flow Direction</h3>
+ 
+        <ul>
+          <li>Block elements suivent block flow direction du parent - défini par son <strong>writing mode</strong>
+            (horizontal-tb : horizontal top-bottom)</li>
+          <li>Chaque block apparaît sur une <strong>nouvelle ligne</strong> séparée par les marges du block</li>
+        </ul>
+
+
+   
+      <h3>Inline Flow Direction</h3>
+ 
+        <ul>
+          <li>continue sur la ligne jusqu'à atteindre la width du parent</li>
+          <li>dans ce cas retourne à la ligne</li>
+        </ul>
+ 
+      <h3>Margin Collapsing</h3>
+        <ul>
+          <li>Fusion de deux marges adjacentes en la valeur la plus élevée</li>
+          <li>dans ce cas retourne à la ligne</li>
+        </ul>
+  </article>
+
+  <p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+
+  <p>By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total
+    width and height is our content + padding + border width/height.</p>
+
+  <p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins,
+    not both.</p>
+
+  <p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and
+    adjacent text nodes, if there is space on the same line. Overflowing inline elements will <span>wrap onto a new line
+      if possible (like this one containing text)</span>, or just go on to a new line if not, much like this image will
+    do: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+</body>
+
+</html>

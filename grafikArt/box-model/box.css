@@ -1,0 +1,67 @@
+/* Inline element */
+a {
+    /* Ignoré */
+    width: 200px;
+    height: 100px;
+    /* pas ignoré mais ne repousse pas les autres éléments - chevauchement*/
+    margin: 30px;
+    padding: 10px;
+    background-color: rgba(136, 255, 199, 0.5);
+    border: 2px solid blue;
+}
+
+span {
+    margin: 20px;
+    padding: 20px;
+    width: 80px;
+    height: 50px;
+    border: 2px solid blue;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+
+.span-inline-block {
+    
+    display: inline-block;
+    /* pas ignoré et ne repousse pas les autres éléments - pas de chevauchement*/
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid blue;
+    width: auto;
+    height: 100px;
+}  
+h2 {
+    text-transform: uppercase;
+}
+
+
+.box-content {
+    width: 300px;
+    padding : 0 100px;
+    /* width == content width */
+    box-sizing: content-box;
+}
+
+.box-border {
+    width: 300px;
+    padding : 0 100px;
+    /* width == border + padding + content */
+    box-sizing: border-box;
+}
+
+.m-collapse-1 {
+    margin-bottom: -100px;
+}
+
+.m-collapse-2 {
+    margin-top: 200px;
+}
+
+.overflow-1 {
+    width: 100px;
+    height: 100px;
+    /* overflow: hidden; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
