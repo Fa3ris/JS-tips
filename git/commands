@@ -1,0 +1,150 @@
+git init
+
+.gitignore
+    target/
+
+
+git config --list
+
+git config
+
+git help <command>
+
+git add
+
+git add --all *.html .
+ . ne prend pas en compte la suppression
+
+git commit -a -m
+
+git log --oneline
+
+git diff -p index.html
+
+
+git checkout
+detached HEAD : spectateu
+
+
+git revert SHA1 :
+undo only what commit did
+
+git reset SHA1
+undo all after commit
+
+git reset
+unstage files
+
+git reset --hard
+go back to last commit state
+
+
+HEAD^ == 1 commit en arrière
+HEAD^^ == HEAD~2 = 2 commits en arrière
+
+
+git reset --soft
+
+git reset --mixed
+
+
+      git branch <name>
+    + git checkout <name>
+== git checkout -b name 
+
+
+
+git merge
+try fast-forward si la branch à merger est en avance sur la branche target
+
+git merge --no-ff
+force auto-merging and not fast-forward
+
+
+git commit --amend
+si on n'a pas push
+ajoute modif au commit précédent
+
+
+git rebase <nouvelle base>
+
+change la base de la branche sur laquelle on se trouve
+
+permet d'avoir les modif sur une même ligne de commit ?
+
+
+ex : 
+fait des modifs sur une branche basée sur master
+en parallèle, fait des modifs sur master, donc master a avancé aussi
+
+(sur la branche feature) $ git rebase master
+les modifs de feature viennent s'ajouter aux modifs faites sur master : on est toujours sur la branche feater
+On a changé notre base de départ pour prendre en compte les modifs de master
+On peut ensuite faire
+$ git checkout master
+$ git merge feature ==> fast-forward sans problème
+
+
+$ git rebase -i master
+$ git rebase -i HEAD~2 => squash
+
+WARNING : l'ordre des commits est l'opposé de git log donc le plus récent est en bas
+
+
+
+git stash
+
+git stash list
+
+
+      git stash apply
+    + git stash drop
+== git stash pop
+
+git stash save <description du stash>
+
+git stash show stash@{1}
+git stash show stash@{1} -p
+
+
+
+git init --bare
+
+git remote -v
+git remote add origin ssh://
+
+git remote rename origin new_name
+
+git branch -r 
+
+git push <remote> <branch>
+
+git branch -d feature
+git push origin --delete feature
+
+branch.autosetuprebase always
+
+git pull --rebase origin master 
+
+
+NOMMER SES commits
+build : modif de la config du build - gulp, webpack, npm
+ci : modif de la config pour countinuous integration : Jenkins, Travis, Circle, BrowserStack, SauceLabs, Ansible
+docs : modif doc
+feat : new feature
+fix : bug
+perf : work better
+refactor : refacto
+style : indentation, mise en forme, ajout d’espace, renommante d’une variable
+test : modif test unitaires
+
+
+
+git fork
+
+upstream
+
+clé SSH 
+RSA
+
+
